@@ -1,0 +1,23 @@
+<div class="container" style="display: flex; flex-direction: column;">
+    <h2 mat-dialog-title>Profile {{data.action}}</h2>
+    <mat-dialog-content class="content" style="flex: 1;">
+      <div class="name-group">
+        <mat-form-field style="width: 50%;">
+          <input matInput placeholder="FirstName*" [(ngModel)]="newUser.firstName" style="width: 100%;">
+        </mat-form-field>
+        <mat-form-field style="width: 50%;">
+          <input matInput placeholder="LastName*" [(ngModel)]="newUser.lastName" style="width: 100%;">
+        </mat-form-field>
+      </div>
+      <mat-form-field style="width: 100%;">
+        <input matInput placeholder="Email*" [(ngModel)]="newUser.email" style="width: 100%;">
+      </mat-form-field>
+      <mat-form-field style="width: 100%;">
+        <input matInput placeholder="Phone" [(ngModel)]="newUser.phone" style="width: 100%;">
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="button-group">
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-flat-button color="primary" (click)="onAddClick()">Add</button>
+    </mat-dialog-actions>
+</div>

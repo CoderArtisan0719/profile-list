@@ -1,0 +1,31 @@
+<div class="viewport-container">
+  <div class="add-button-container">
+    <button mat-fab color="warn" aria-label="Add new item" class="rounded-button" (click)="addUser()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <cdk-virtual-scroll-viewport itemSize="88" class="items-viewport">
+    <div *cdkVirtualFor="let item of filteredItems; let index = index" class="item-container"  [ngStyle]="containerStyle">
+      <mat-card class="item-card">
+        <mat-card-header>
+          <mat-card-title>{{ item.firstName }} {{ item.lastName }} </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ item.phone }}</p>
+          <div class="content-bottom">
+            <span>{{ item.email }}</span>
+            <div class="button-group">
+              <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon" (click)="updateUser(item)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon" (click)="deleteUser(item.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

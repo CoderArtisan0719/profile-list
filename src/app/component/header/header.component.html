@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="header-container">
+    <span>Profiles</span>
+    <div style="flex: 1 1 auto;"></div>
+    <input type="search" class="site-search" placeholder="Search" 
+           [(ngModel)]="searchKeyword" (input)="handleSearchChange($event)" />
+    <div mat-card-avatar class="user-avatar"></div>
+  </mat-toolbar-row>
+</mat-toolbar>

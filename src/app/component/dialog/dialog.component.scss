@@ -1,0 +1,14 @@
+.container {
+    width: 440px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+}
+
+.name-group {
+    display: flex;
+    gap: 10px;
+}

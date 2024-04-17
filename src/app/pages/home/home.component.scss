@@ -1,0 +1,84 @@
+.viewport-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.items-viewport {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width of the container */
+  height: calc(100vh - 64px); /* Adjust height to subtract non-scrolling elements */
+  box-sizing: border-box;
+  overflow: auto; /* Handle scrolling within the viewport */
+  background: rgba(127, 127, 127, 0.1); /* Light background for better visibility */
+
+  div:first-child {
+    padding-top: 80px;
+  }
+}
+
+.add-button-container {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.rounded-button {
+  border-radius: 50%;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding on the sides */
+}
+
+.item-card {
+  margin: 12px 0; /* Space between cards */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(109, 110, 115, 0.11);
+  }
+
+  &:hover .button-group {
+    opacity: 1; /* Fully visible when card is hovered */
+  }
+}
+
+.load-more-button {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0; /* Padding for clickability */
+  margin-top: 10px; /* Space above the button */
+}
+
+.content-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .content-bottom {
+    display: flex;
+    gap: 16px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 8px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .item-card:hover .button-group {
+    opacity: 1; /* Fully visible when card is hovered */
+  }
+}

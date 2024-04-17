@@ -1,0 +1,31 @@
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.header-container {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.site-search{
+    padding: 10px 10px 10px 18px;
+    margin-right: 20px;
+    width: 200px;
+    border: 0;
+    border-radius: 16px;
+    opacity: .9;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+
+    &:hover {
+        width: 250px;
+        opacity: 1;
+    }
+}
